@@ -1,0 +1,10 @@
+## Name of the node
+-name blinky@rpi2.local
+
+## Cookie for distributed erlang
+-setcookie blinky_cookie
+
+## Start the Elixir shell
+-noshell
+-user Elixir.IEx.CLI
+-extra --no-halt
