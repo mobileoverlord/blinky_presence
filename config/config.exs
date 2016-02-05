@@ -28,3 +28,9 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
+config :blinky_presence,
+  led: :green
+case System.get_env("NERVES_TARGET") do
+  nil -> nil
+  target -> import_config "target/#{target}.exs"
+end
